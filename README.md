@@ -52,14 +52,26 @@ how to write your own mapping. You can write them in JSON and YAML format.
 
 ## Use a Digital Ocean VPS instead of Virtualbox as provider
 
-Install vagrant-digitalocean provider
+Install vagrant-digitalocean provider:
 
 `vagrant plugin install vagrant-digitalocean`
 
-Start a box with provider digital_ocean
+Add your Digitalocean Account credentials and SSH Key info in
+`vagrant_config.yml` using the template `vagrant_config.yml.example`.
+
+Start a box with provider digital_ocean:
 
 `vagrant up --provider=digital_ocean`
 
+When the setup is finished, you can log in to the machine unsing
+`vagrant up` as usual.
+
+Because the Digitalocean provider currently does not support
+port-forwarding, you have to connect to the database by using the IP
+adress. In order to find out the IP, log in to your Digitalocean Account
+and copy it from the droplets detail view or run `ifconfig` on the box.
+Then connect to the datbase like this (from the Commandline):
+`psql -U osm -d osm -h <IP-Adress> -p 5432` and password "osm".
 
 __Warning__
 
@@ -67,7 +79,7 @@ Depending on the size of the Digitalocean droplet you are running, you
 get charged as long as your box is existing. Because the ressources are
 reserved, you get charged for a stopped droplet too. If you dont want to
 pay while not working on it, you can destroy the droplet with vagrant:
-`vagrant destroy remote`.
+`vagrant destroy`. Also check the status in your Digitalocean account.
 The downside is that you have to run your data import every time you
 recreate the droplet.
 
