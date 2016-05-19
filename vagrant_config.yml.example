@@ -1,0 +1,8 @@
+digital_ocean:
+  private_key_path: ~/.ssh/id_rsa
+  ssh_key_name: me@my_machine
+  ca_path: /etc/ssl/certs/ca-certificates.crt
+  token: your_personal_api_token_from_digital_ocean
+  image: ubuntu-14-04-x64
+  region: fra1
+  size: 2GB

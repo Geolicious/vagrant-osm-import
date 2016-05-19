@@ -1,0 +1,59 @@
+{
+    "tables": {
+        "admin": {
+            "fields": [
+                {
+                    "type": "id",
+                    "name": "osm_id",
+                    "key": null
+                },
+                {
+                    "type": "geometry",
+                    "name": "geometry",
+                    "key": null
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "key": "name"
+                },
+                {
+                    "type": "string",
+                    "name": "name_en",
+                    "key": "name:en"
+                },
+                {
+                    "type": "string",
+                    "name": "name_de",
+                    "key": "name:de"
+                },
+                {
+                    "type": "string",
+                    "name": "name_es",
+                    "key": "name:es"
+                },
+                {
+                    "type": "string",
+                    "name": "name_fr",
+                    "key": "name:fr"
+                },
+                {
+                    "type": "mapping_value",
+                    "name": "type",
+                    "key": null
+                },
+                {
+                    "type": "integer",
+                    "name": "admin_level",
+                    "key": "admin_level"
+                }
+            ],
+            "type": "polygon",
+            "mapping": {
+                "boundary": [
+                    "administrative"
+                ]
+            }
+        }
+    }
+}

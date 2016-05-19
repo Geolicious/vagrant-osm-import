@@ -1,0 +1,4 @@
+.vagrant/
+config/postgresql.conf
+vagrant_config.yml
+mapping.json
